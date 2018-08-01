@@ -3,6 +3,8 @@
         "nib": "^1.1.2",
         "react": "^16.4.1",
         "react-dom": "^16.4.1",
+        "react-router": "^4.3.1",
+        "react-router-dom": "^4.3.1",
         "react-scripts": "1.1.4",
         "rupture": "^0.7.1",
         "stylus": "^0.54.5"
