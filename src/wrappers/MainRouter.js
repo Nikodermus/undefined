@@ -1,25 +1,31 @@
-import React, { Component } from 'react';
-import { Route, Router, Switch } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+// Wrappers
 import ErrorBoundary from './ErrorBoundary';
+
+// Shared
 import Header from '../shared/Header';
 import Footer from '../shared/Footer';
 
-const RouterComp = () => (
-  <div>
-    <Router>
+// Views
+import GenericError from '../views/GenericError';
+import Home from '../views/Home';
+
+const MainRouter = () => (
+  <Router>
+    <div>
       <ErrorBoundary>
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/oops" component={GenericError} />
-          <Route component={NotFound} />
+          <Route path="/oops/:message" component={GenericError} message="" />
+          <Route component={GenericError} />
         </Switch>
-        #w%6*VAvsWr@
         <Footer />
       </ErrorBoundary>
-    </Router>
-  </div>
+    </div>
+  </Router>
 );
 
-export default RouterComp;
+export default MainRouter;

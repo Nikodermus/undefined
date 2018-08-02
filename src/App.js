@@ -1,15 +1,7 @@
 import React from 'react';
 
-const App = () => (
-  <div>
-    <p>
-      Hola!
-      <br />
-      <h1>
-LAura estuvo aqui
-      </h1>
-    </p>
-  </div>
-);
+import MainRouter from './wrappers/MainRouter';
+
+const App = () => <MainRouter />;
 
 export default App;

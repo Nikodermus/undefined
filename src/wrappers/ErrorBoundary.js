@@ -23,7 +23,7 @@ export default class ErrorBoundary extends Component {
       setTimeout(() => {
         this.setState({ has_error: false });
       }, 0);
-      return <Redirect to="/oops/:message" message={message} />;
+      return <Redirect to={`/oops/${message}`} message={message} />;
     }
     return children;
   }
