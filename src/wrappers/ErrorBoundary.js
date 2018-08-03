@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 
 export default class ErrorBoundary extends Component {
   static propTypes = {};
@@ -19,11 +19,12 @@ export default class ErrorBoundary extends Component {
   render() {
     const { has_error, message } = this.state;
     const { children } = this.props;
+    sessionStorage.setItem('error_msg', message);
     if (has_error) {
       setTimeout(() => {
         this.setState({ has_error: false });
       }, 0);
-      return <Redirect to={`/oops/${message}`} message={message} />;
+      return <Redirect to="/oops/" />;
     }
     return children;
   }

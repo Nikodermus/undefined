@@ -19,7 +19,7 @@ const MainRouter = () => (
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/oops/:message" component={GenericError} message="" />
+          <Route path="/oops" component={GenericError} />
           <Route component={GenericError} />
         </Switch>
         <Footer />
