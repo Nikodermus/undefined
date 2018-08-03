@@ -7,7 +7,10 @@
       "modules": true
     }
   },
-  "env": { "browser": true },
+  "env": {
+    "browser": true,
+    "jest": true
+  },
   "extends": "airbnb",
   "rules": {
     "arrow-body-style": "warn",
