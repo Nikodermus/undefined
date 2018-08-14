@@ -1,3 +1,28 @@
 @require '../helpers/*'
 @require '../library/*'
 
+.secret-panel
+  background-image: url('../resources/images/test.jpg')
+  background-size: 10vmin 10vmin
+  height: 50vmin
+  width: 50vmin
+  position: relative
+  &__inner
+    height: 10vmin
+    width: 10vmin
+    background-image: @background-image
+    background-size: @background-size
+    transform: translateX(-50%) translateY(-50%)
+    absolute: top 50% left 50%
+    z-index: 10
+    transition-duration: 2s
+    &--button
+      z-index: 5
+      display: flex
+      justify-content: center
+      align-items: center
+    &--show
+      transform: translateX(-50%) translateY(50%)
+      box-shadow: 0 0 10px alpha(black, .5)
+
+
